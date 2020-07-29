@@ -1,6 +1,6 @@
 module ApplicationHelper
   def serialize(template, options = {})
-    JBuilderTemplate
-      .new(self) { |json| json.partial! template, options }.attriubtes!
+    JbuilderTemplate
+      .new(self) { |json| json.partial! template, options }.attributes!
   end
 end

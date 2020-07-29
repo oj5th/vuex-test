@@ -15,7 +15,7 @@ export default {
   },
   render() {
     return(
-      <div class col-lg-4 col-sm-6 mb-4>
+      <div class="col-lg-4 col-sm-4 mb-4">
         <div class="card h-100">
           <a href={this.product.url}>
             <img src={this.product.image} class="card-img-top" alt="" />
