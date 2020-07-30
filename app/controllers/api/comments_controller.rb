@@ -1,19 +1,17 @@
-class CommentsController < ApplicationController
+class Api::CommentsController < ApplicationController
   def create
     comment = Comment.new(comment_params)
 
-    unless comment.save
-      flash[:errors] = comment.errors
+    if comment.save
+      render json: comment
+    else
+      render json: { errors: comment.errors }, status: :unprocessable_entity
     end
-
-    redirect_to product_path(params[:product_id])
   end
 
   def destroy
     comment = Comment.find(params[:id])
     comment.destroy
-
-    redirect_to product_path(params[:product_id])
   end
 
   private

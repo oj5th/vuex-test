@@ -29,6 +29,10 @@ import store from '../store'
 import I18n from "i18n-js";
 global.I18n = I18n;
 
+// Add js-routes # https://medium.com/@dalezak/rails-6-sharing-routes-with-vue-components-4564ddb332d4
+import Routes from '../routes/index.js.erb';
+window.Routes = Routes;
+
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
