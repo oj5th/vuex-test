@@ -13,6 +13,12 @@ export const actions = {
       .then(() => {
         commit('commentCancelled', commentId)
       })
+  },
+  addComment({ commit }, { productId, commentParams }) {
+    api.comment.create(productId, commentParams)
+      .then((comment) => {
+        commit('commentAdded', comment)
+    })
   }
 }
 
@@ -22,6 +28,9 @@ export const mutations = {
   },
   commentCancelled(state, commentId) {
     state.comments = state.comments.filter(comment => commentId != comment.id)
+  },
+  commentAdded(state, comment) {
+    state.comments.push(comment)
   }
 }
 
