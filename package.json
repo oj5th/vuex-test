@@ -8,11 +8,13 @@
     "@rails/webpacker": "4.2.2",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.1.2",
+    "i18n-js": "^3.7.1",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.11",
-    "vue-turbolinks": "^2.1.0"
+    "vue-turbolinks": "^2.1.0",
+    "vuex": "^3.5.1"
   },
   "version": "0.1.0",
   "devDependencies": {

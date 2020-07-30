@@ -22,6 +22,13 @@ import Vue from 'vue'
 // Import all the macro components of the application
 import * as instances from '../instances'
 
+// Import the store
+import store from '../store'
+
+// Add i18n-js # https://dev.to/yatish27/migrating-i18n-js-from-asset-pipeline-to-webpacker-in-rails-5fjh
+import I18n from "i18n-js";
+global.I18n = I18n;
+
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
@@ -35,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
 
       new Vue({
         el: element,
+        store,
         render: h => h(instance.component, { props })
       })
     })
