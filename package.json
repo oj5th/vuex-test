@@ -8,7 +8,7 @@
     "@rails/webpacker": "4.2.2",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "i18n-js": "^3.7.1",
     "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0",
